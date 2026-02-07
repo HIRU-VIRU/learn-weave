@@ -10,15 +10,7 @@
 
 ## 📝 How to Run the Project
 
-### 🔥 Start Everything at Once
-```bash
-./scripts/start-all.sh
-```
-This starts **ChromaDB → Backend → Frontend** in order and waits for each to be ready.
-
-### Or Start Services Individually
-
-#### 1️⃣ Start ChromaDB
+### 1️⃣ Start ChromaDB
 ```bash
 ./scripts/start-chromadb.sh
 ```
@@ -133,10 +125,8 @@ sudo docker stop learnweave-chromadb  # ChromaDB
 # Or press Ctrl+C in respective terminals
 ```
 
-**View Logs (when started via start-all.sh):**
+**View Logs:**
 ```bash
-tail -f /tmp/learnweave-backend.log   # Backend
-tail -f /tmp/learnweave-frontend.log  # Frontend
 sudo docker logs learnweave-chromadb -f   # ChromaDB
 ```
 
@@ -146,8 +136,7 @@ sudo docker logs learnweave-chromadb -f   # ChromaDB
 
 | Script | Description |
 |--------|-------------|
-| `./scripts/start-all.sh` | Start all services (ChromaDB + Backend + Frontend) |
-| `./scripts/start-backend.sh` | Start backend server only |
-| `./scripts/start-frontend.sh` | Start frontend dev server only |
-| `./scripts/start-chromadb.sh` | Start ChromaDB Docker container only |
+| `./scripts/start-backend.sh` | Start backend server |
+| `./scripts/start-frontend.sh` | Start frontend dev server |
+| `./scripts/start-chromadb.sh` | Start ChromaDB Docker container |
 | `./scripts/check-requirements.sh` | Verify all dependencies are installed |

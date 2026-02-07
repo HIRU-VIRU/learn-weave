@@ -71,7 +71,7 @@ if command -v docker &> /dev/null; then
     echo "✓ Found: $DOCKER_VERSION"
     
     # Check if Docker is running
-    if docker ps &> /dev/null; then
+    if sudo docker ps &> /dev/null; then
         echo "✓ Docker daemon is running"
     else
         echo "⚠ Docker daemon is not running"
